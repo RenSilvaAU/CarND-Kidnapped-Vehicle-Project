@@ -9,9 +9,13 @@
 #ifndef PARTICLE_FILTER_H_
 #define PARTICLE_FILTER_H_
 
+#define NEAR_ZERO 0.0001
+
+
 #include <string>
 #include <vector>
 #include "helper_functions.h"
+
 
 struct Particle {
   int id;
@@ -111,6 +115,8 @@ class ParticleFilter {
   // Set of current particles
   std::vector<Particle> particles;
 
+  
+
  private:
   // Number of particles to draw
   int num_particles; 
@@ -120,6 +126,7 @@ class ParticleFilter {
   
   // Vector of weights of all particles
   std::vector<double> weights; 
+
 };
 
 #endif  // PARTICLE_FILTER_H_
